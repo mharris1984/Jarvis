@@ -1,6 +1,4 @@
 #This is the code to be placed into ESPHome for your device to utilize
-#
-
 
 #================================================================================
 #|              JARVIS - ESPHOME WAKE WORD                                      |
@@ -9,5 +7,52 @@
 #|                  Mike Harris (https://github.com/mharris1984)                |
 #|                                                                              |
 #|            Version:                                                          |
-#|                  1.0                                                         |
+#|                  2.0                                                         |
+#|                                                                              |
+#|            Hardware:                                                         |
+#|                  ESP32-S3                                                    |
 #================================================================================
+
+substitutions:
+  name: Jarvis_Wake_Word
+  friendly_name: ESPHOME HA Wake
+  version_info: 2.0
+
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: true
+  platformio_options:
+    board_build.flash_mode: dio
+  project:
+    name: "${name}"
+    version: "${version_info}"
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+
+api:
+
+ota:
+
+improv_serial:
+
+wifi:
+  ap:
+    ssid: "QuantumSync_"
+
+captive_portal:
+
+dashboard_import:
+  package_import_url: github://esphome/firmware/esp-web-tools/esp32s3.yaml@v2
+
+
+esp32_improv:
+  authorizer: none
+
+
+web_server:
