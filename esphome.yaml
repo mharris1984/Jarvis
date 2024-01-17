@@ -1,0 +1,13 @@
+#This is the code to be placed into ESPHome for your device to utilize
+#
+
+
+#================================================================================
+#|              JARVIS - ESPHOME WAKE WORD                                      |
+#|                                                                              |
+#|            Created by:                                                       |
+#|                  Mike Harris (https://github.com/mharris1984)                |
+#|                                                                              |
+#|            Version:                                                          |
+#|                  1.0                                                         |
+#================================================================================
